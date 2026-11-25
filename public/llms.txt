@@ -1,0 +1,24 @@
+# Confeitaria Pampulha
+
+> Confeitaria artesanal em Belo Horizonte comandada por Angélica e Yuri. Especializada na melhor palha italiana da região, brownies recheados, bolos de pote, tortas, bolos festivos e brindes corporativos com nota 5,0 estrelas em 53 avaliações verificadas no Google.
+
+## Identidade e Contato
+- Nome: Confeitaria Pampulha
+- Fundadores: Angélica e Yuri
+- Endereço: Rua Maria Moreira Réis, 26, Loja 19, Centro Empresarial e Comercial Pampulha, Bairro Itapoã, Belo Horizonte - MG, CEP 31710-320
+- Telefone e WhatsApp: +55 (31) 3653-7001
+- Instagram: https://www.instagram.com/confeitariapampulha/
+- Horário da loja física: Segunda a sexta-feira, das 08:00 às 18:00 (Sábado e domingo fechado)
+
+## Especialidades
+- Palha italiana artesanal (tradicional, leite Ninho e variações)
+- Brownies recheados (Ninho, avelã e chocolate intenso)
+- Bolos no pote para pronta entrega e lembrancinhas de casamento (Prestígio, Baunilha com Brigadeiro)
+- Tortas e fatias artesanais (Fatia Dois Amores cacau 100%, brigadeiro de Ninho e creme de avelã)
+- Bolos de festa (morango com brigadeiro de limão, churros, baunilha com limão e geleia de morango)
+- Brigadeiros gourmet, pipoca gourmet, linha sazonal de Páscoa e brindes corporativos
+
+## Páginas Oficiais
+- Página Inicial e Cardápio: https://newconfeitariapampulha.pages.dev/
+- Links Oficiais e Atalhos: https://newconfeitariapampulha.pages.dev/linkbio
+- Política de Privacidade: https://newconfeitariapampulha.pages.dev/politica-de-privacidade

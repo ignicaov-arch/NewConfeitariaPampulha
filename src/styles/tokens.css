@@ -1,0 +1,32 @@
+:root {
+  /* Paleta oficial Confeitaria Pampulha (60-30-10 com contraste WCAG AA+) */
+  --creme: #FAF3EE;
+  --papel: #FFFDFB;
+  --areia: #F2E2DC;
+  --rosa-selo: #F5CED8;
+  --rosa-suave: #FCE5EC;
+
+  --tinta: #2B1712;
+  --tinta-2: #3E231C;
+  --texto: #2B1712;
+  --texto-suave: #684A42;
+
+  --framboesa: #B83350;
+  --framboesa-hover: #9E2742;
+  --acento-texto: #A42945;
+  --acento-claro: #F7B7C5;
+  --ouro: #D89448;
+
+  --linha: rgba(43, 23, 18, 0.12);
+  --linha-clara: rgba(255, 253, 251, 0.16);
+
+  --fonte-titulo: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  --fonte-serif: 'Instrument Serif', Georgia, serif;
+  --fonte-texto: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+
+  --raio: 28px;
+  --raio-m: 20px;
+  --largura: 1240px;
+  --respiro: clamp(76px, 9vw, 132px);
+  --grao: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+}

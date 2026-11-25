@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+.wrangler/
+coverage/
+.skills-gates/
+raw_img/
+.env
+.env.*
+!.env.example
+.dev.vars
+*.pem
+*.key
+*.log

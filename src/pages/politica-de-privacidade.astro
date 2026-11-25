@@ -1,0 +1,147 @@
+---
+import '../styles/site.css';
+import { BRAND } from '../data/brand';
+import { buildSiteSchemaGraph } from '../domain/seoSchema';
+import { buildWhatsAppUrl, sanitizeUrl } from '../domain/whatsapp';
+import CookieConsent from '../components/CookieConsent';
+import FooterSection from '../components/FooterSection';
+import LogoEmblem from '../components/LogoEmblem';
+import WhatsAppFloat from '../components/WhatsAppFloat';
+
+const schemaJson = buildSiteSchemaGraph('privacy');
+const dpoWhatsappHref = sanitizeUrl(
+  buildWhatsAppUrl(
+    'Olá, equipe Confeitaria Pampulha! Gostaria de exercer meus direitos de titular de dados (LGPD).'
+  )
+);
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Política de Privacidade e LGPD | Confeitaria Pampulha</title>
+  <meta
+    name="description"
+    content="Política de Privacidade e proteção de dados pessoais (LGPD) da Confeitaria Pampulha, localizada no bairro Itapoã em Belo Horizonte."
+  />
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <link rel="canonical" href="https://newconfeitariapampulha.pages.dev/politica-de-privacidade" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content={BRAND.name} />
+  <meta property="og:url" content="https://newconfeitariapampulha.pages.dev/politica-de-privacidade" />
+  <meta property="og:title" content="Política de Privacidade e LGPD | Confeitaria Pampulha" />
+  <meta
+    property="og:description"
+    content="Transparência sobre dados, atendimento pelo WhatsApp e direitos do titular na Confeitaria Pampulha."
+  />
+  <meta property="og:image" content="https://newconfeitariapampulha.pages.dev/img/og-pampulha-1200x630.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#2B1712" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+  <script is:inline type="application/ld+json" set:html={schemaJson.replace(/</g, '\\u003c')} />
+</head>
+<body>
+  <header class="topo is-rolou" id="topo">
+    <div class="topo__pilula max-w-5xl">
+      <a class="marca text-current" href="/" style="color: inherit; text-decoration: none;">
+        <LogoEmblem size={34} />
+        <span>Confeitaria Pampulha</span>
+      </a>
+      <nav class="menu" aria-label="Principal">
+        <a href="/">Início</a>
+        <a href="/#cardapio">Cardápio</a>
+        <a href="/#orcamento">Simulador</a>
+        <a href="/linkbio">LinkBio</a>
+      </nav>
+      <a class="botao botao--pequeno topo__cta" href="/#orcamento">Encomendar</a>
+    </div>
+  </header>
+
+  <main class="wrap max-w-5xl" style="padding-top: 132px; padding-bottom: 56px;">
+    <article
+      style="padding: clamp(28px, 5vw, 52px); border-radius: 28px; background: var(--papel, #FFFDFB); border: 1px solid var(--linha, rgba(43, 23, 18, 0.12));"
+    >
+      <p class="etiqueta"><i aria-hidden="true" />Transparência e proteção de dados</p>
+      <h1 class="titulo-m" style="margin-bottom: 18px;">
+        Política de Privacidade e <em>LGPD.</em>
+      </h1>
+      <p class="answer-first" style="color: var(--texto-suave, #684A42);">
+        A <strong>{BRAND.legalName}</strong> ({BRAND.name}, CNPJ {BRAND.cnpj}) respeita a sua
+        privacidade e atua em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº
+        13.709/2018), o Marco Civil da Internet e o Código de Defesa do Consumidor. Última revisão:{' '}
+        <time datetime="2026-11-25">{BRAND.updatedDisplay}</time>.
+      </p>
+
+      <h2 style="font-size: 24px; margin: 28px 0 10px;">1. Controladora e canal do encarregado</h2>
+      <p>
+        A controladora responsável pelo tratamento de dados é a <strong>{BRAND.legalName}</strong>,
+        conduzida por <strong>{BRAND.founders}</strong> na {BRAND.address.street},{' '}
+        {BRAND.address.complex}, Bairro {BRAND.address.neighborhood}, {BRAND.address.city} -{' '}
+        {BRAND.address.state}, CEP {BRAND.address.postalCode}, telefone e WhatsApp{' '}
+        {BRAND.whatsappDisplay}.
+      </p>
+
+      <h2 style="font-size: 24px; margin: 28px 0 10px;">2. Minimização de dados nas encomendas</h2>
+      <p>
+        O simulador de pedidos da <a href="/">página inicial</a> calcula a estimativa de porções no
+        próprio aparelho para montar a mensagem de orçamento. Não exigimos cadastro prévio nem
+        coletamos documentos ou cartões no site: somente as informações que você escolhe enviar no
+        WhatsApp (como nome, data do evento e endereço de entrega) são utilizadas para preparar o
+        seu pedido.
+      </p>
+
+      <h2 style="font-size: 24px; margin: 28px 0 10px;">3. Preferências e consentimento</h2>
+      <p>
+        Mantemos apenas registro essencial (<code>pampulha_lgpd_consent</code>) para guardar sua
+        escolha de privacidade. Métricas opcionais permanecem desativadas até autorização explícita
+        e podem ser ajustadas a qualquer momento no rodapé.
+      </p>
+
+      <h2 style="font-size: 24px; margin: 28px 0 10px;">4. Seus direitos (Art. 18 da LGPD)</h2>
+      <p>
+        Você pode solicitar confirmação, acesso, correção, portabilidade ou eliminação dos seus
+        dados de atendimento diretamente com nossa equipe pelo canal oficial abaixo.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px;">
+        <a
+          class="botao botao--escuro"
+          href={dpoWhatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Falar com o encarregado no WhatsApp
+        </a>
+        <a class="botao botao--linha" href="/">Voltar ao início</a>
+        <a class="botao botao--linha" href="/linkbio">Abrir /linkbio</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="rodape">
+    <FooterSection isHome={false} />
+  </footer>
+  <CookieConsent />
+  <WhatsAppFloat />
+
+  <script>
+    import '../scripts/smoothMotion';
+    import '../scripts/interactions';
+  </script>
+</body>
+</html>

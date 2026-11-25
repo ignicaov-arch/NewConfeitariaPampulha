@@ -1,0 +1,123 @@
+---
+import '../styles/site.css';
+import { BRAND } from '../data/brand';
+import { buildSiteSchemaGraph } from '../domain/seoSchema';
+import BentoCategories from '../components/BentoCategories';
+import CookieConsent from '../components/CookieConsent';
+import CraftSection from '../components/CraftSection';
+import CustomDesignSection from '../components/CustomDesignSection';
+import FaqSection from '../components/FaqSection';
+import FooterSection from '../components/FooterSection';
+import HeaderPill from '../components/HeaderPill';
+import HeroSection from '../components/HeroSection';
+import HowItWorksSection from '../components/HowItWorksSection';
+import LocationSection from '../components/LocationSection';
+import MarqueeRibbon from '../components/MarqueeRibbon';
+import MenuPackages from '../components/MenuPackages';
+import OrderFormSection from '../components/OrderFormSection';
+import TestimonialsSection from '../components/TestimonialsSection';
+import WhatsAppFloat from '../components/WhatsAppFloat';
+
+const schemaJson = buildSiteSchemaGraph('home');
+const speculationJson = JSON.stringify({
+  prerender: [{ urls: ['/linkbio', '/politica-de-privacidade'], eagerness: 'moderate' }]
+});
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Confeitaria Pampulha | Palha Italiana, Brownies e Bolos BH</title>
+  <meta
+    name="description"
+    content="Confeitaria Pampulha no Itapoã, BH. A melhor palha italiana, brownies recheados, bolos de pote, tortas, bolos de festa e brindes corporativos sob encomenda."
+  />
+  <meta name="author" content={BRAND.founders} />
+  <meta
+    name="robots"
+    content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  />
+  <link rel="canonical" href="https://newconfeitariapampulha.pages.dev/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content={BRAND.name} />
+  <meta property="og:url" content="https://newconfeitariapampulha.pages.dev/" />
+  <meta property="og:title" content="Confeitaria Pampulha | Palha Italiana, Brownies e Bolos BH" />
+  <meta
+    property="og:description"
+    content="Sobremesas artesanais no Itapoã, Pampulha em BH. Palha italiana, brownie recheado, bolo de pote, tortas e kits corporativos com nota 5,0 no Google."
+  />
+  <meta property="og:image" content="https://newconfeitariapampulha.pages.dev/img/og-pampulha-1200x630.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta
+    property="og:image:alt"
+    content="Mesa artesanal da Confeitaria Pampulha em Belo Horizonte com palha italiana, torta e brigadeiros"
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Confeitaria Pampulha | Sobremesas em Belo Horizonte" />
+  <meta
+    name="twitter:description"
+    content="A melhor palha italiana, brownies recheados, bolos de pote, tortas e brindes corporativos no bairro Itapoã, Belo Horizonte."
+  />
+  <meta name="twitter:image" content="https://newconfeitariapampulha.pages.dev/img/og-pampulha-1200x630.webp" />
+  <meta name="theme-color" content="#2B1712" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link
+    rel="preload"
+    as="image"
+    href="/img/hero.webp"
+    imagesrcset="/img/hero-800.webp 800w, /img/hero.webp 1600w"
+    imagesizes="100vw"
+    fetchpriority="high"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Instrument+Serif:ital@0;1&display=swap"
+    rel="stylesheet"
+  />
+  <script is:inline type="application/ld+json" set:html={schemaJson.replace(/</g, '\\u003c')} />
+  <script is:inline type="speculationrules" set:html={speculationJson.replace(/</g, '\\u003c')} />
+</head>
+<body>
+  <header class="topo" id="topo">
+    <HeaderPill />
+  </header>
+
+  <main id="conteudo-principal">
+    <HeroSection>
+      <h1 class="hero__titulo surge">
+        O doce certo faz
+        <br />
+        <em>o momento ficar.</em>
+      </h1>
+    </HeroSection>
+    <MarqueeRibbon />
+    <BentoCategories />
+    <CraftSection />
+    <MenuPackages />
+    <CustomDesignSection />
+    <HowItWorksSection />
+    <TestimonialsSection />
+    <FaqSection />
+    <OrderFormSection client:visible />
+    <LocationSection />
+  </main>
+
+  <footer class="rodape">
+    <FooterSection isHome={true} />
+  </footer>
+
+  <CookieConsent />
+  <WhatsAppFloat />
+
+  <script>
+    import '../scripts/smoothMotion';
+    import '../scripts/interactions';
+  </script>
+</body>
+</html>
