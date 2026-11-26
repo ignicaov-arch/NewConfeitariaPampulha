@@ -205,4 +205,4 @@
 .linkbio-quote { font-size: 0.92rem; line-height: 1.55; margin: 0.45rem 0 0.65rem; color: var(--tinta); }
 .linkbio-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin-top: 0.5rem; }
 .linkbio-table th, .linkbio-table td { text-align: left; padding: 0.5rem 0.35rem; border-bottom: 1px solid var(--lb-border); }
-.linkbio-footer { max-width: 37rem; margin-inline: auto; padding: 0 1.25rem 2.5rem; text-align: center; font-size: 0.82rem; color: var(--lb-muted); }
+.linkbio-footer { max-width: 37rem; margin-inline: auto; padding: 0 1.25rem 5.25rem; text-align: center; font-size: 0.82rem; color: var(--lb-muted); }

@@ -11,16 +11,16 @@ export function CookieConsent() {
         left: '16px',
         bottom: '16px',
         zIndex: 55,
-        width: 'min(440px, calc(100vw - 104px))',
-        padding: '20px',
-        borderRadius: '24px',
+        width: 'min(490px, calc(100vw - 104px))',
+        padding: '14px 18px',
+        borderRadius: '20px',
         background: 'var(--papel, #FFFDFB)',
         color: 'var(--texto, #2B1712)',
         border: '1px solid var(--linha, rgba(43, 23, 18, 0.16))',
         boxShadow: '0 18px 44px -16px rgba(43, 23, 18, 0.32)'
       }}
     >
-      <p style={{ margin: '0 0 12px', fontSize: '14px', lineHeight: 1.5 }}>
+      <p style={{ margin: '0 0 10px', fontSize: '13.5px', lineHeight: 1.45 }}>
         Utilizamos apenas armazenamento essencial para lembrar suas preferências neste site,
         conforme a LGPD. Leia nossa{' '}
         <a href="/politica-de-privacidade" style={{ fontWeight: 600, textDecoration: 'underline' }}>

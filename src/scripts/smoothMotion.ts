@@ -71,7 +71,7 @@ function setupScrollReveals(): void {
   const revealNodes = Array.from(document.querySelectorAll<HTMLElement>('.revela'));
   const counterNodes = Array.from(document.querySelectorAll<HTMLElement>('.conta[data-ate]'));
 
-  if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+  if (!('IntersectionObserver' in window)) {
     revealNodes.forEach((node) => node.classList.add('is-visivel'));
     counterNodes.forEach((node) => animateCounter(node));
     return;
@@ -116,13 +116,13 @@ function setupScrollReveals(): void {
 }
 
 function setupLenis144Hz(): void {
-  if (prefersReducedMotion) return;
-
   const lenis = new Lenis({
-    lerp: 0.082,
+    lerp: 0.078,
     smoothWheel: true,
-    wheelMultiplier: 1.06,
+    wheelMultiplier: 1.08,
     touchMultiplier: 1.35,
+    overscroll: true,
+    respectReducedMotion: false,
     autoRaf: false,
     prevent: (node: HTMLElement) =>
       Boolean(node.closest('[data-lenis-prevent], dialog, .scrollable-modal'))
